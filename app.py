@@ -9,7 +9,7 @@ def home():
 @app.route('/Dani')
 def dani():
     return render_template('dani.html', numeros=range(1, 101))
-
+#primer cambio
 @app.route('/Taty')
 def taty():
     return render_template('taty.html')
