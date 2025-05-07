@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <style>
+        .boton {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .boton:hover {
+            background-color: #0056b3;
+        }
+
+        .formulario {
+            margin: 20px;
+        }
+
+        .formulario input {
+            padding: 10px;
+            margin: 5px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .formulario h2 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulario de Saludo</h2>
+
+    {% if saludo %}
+        <h3>{{ saludo }}</h3>
+    {% else %}
+        <div class="formulario">
+            <form method="POST">
+                <input type="text" name="nombre" placeholder="Nombre" required><br>
+                <input type="text" name="apellido1" placeholder="Apellido 1" required><br>
+                <input type="text" name="apellido2" placeholder="Apellido 2" required><br>
+                <button type="submit" class="boton">Enviar</button>
+            </form>
+        </div>
+    {% endif %}
+</body>
+</html>

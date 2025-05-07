@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dani</title>
+    <style>
+        .boton {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .boton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Conteo de 1 a 100</h2>
+    {% for numero in numeros %}
+        <strong>{{ numero }}</strong>{% if not loop.last %}, {% endif %}
+    {% endfor %}
+    <br><br>
+    <a href="/" class="boton">Volver</a>
+</body>
+</html>

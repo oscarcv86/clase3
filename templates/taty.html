@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Taty</title>
+    <style>
+        .verde {
+            color: green;
+        }
+
+        .boton {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .boton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Nombre repetido 10 veces</h2>
+    {% for _ in range(10) %}
+        <p class="verde">Helena</p>
+    {% endfor %}
+    <br><br>
+    <a href="/" class="boton">Volver>
+</body>
+</html>
